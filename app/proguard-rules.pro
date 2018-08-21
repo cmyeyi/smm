@@ -73,15 +73,5 @@
   public static final android.os.Parcelable$Creator *;
 }
 
--keep class com.cmcm.dmc.sdk.**
--keep class * extends com.cashpintar.pintar.base.BaseFragment.{*;}
--keep class com.cashpintar.pintar.view.**{*;}
--keep class com.cashpintar.pintar.chart.animation.**{*;}
--keep class com.cashpintar.pintar.chart.data.**{*;}
 -keepclassmembers class * implements java.io.Serializable { *; }
-
-#Sensors
--dontwarn com.sensorsdata.analytics.android.**
--keep class com.sensorsdata.analytics.android.** {
-*;
-}
+-keepclassmembers class * implements com.can.mz.build.UnProguardable { *; }
