@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tabs_item_id" type="id" />
+    <item name="banner_p_container_id" type="id" />
+</resources>

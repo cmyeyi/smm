@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "102910674873",
+    "firebase_url": "https://hello-girl-c22e6.firebaseio.com",
+    "project_id": "hello-girl-c22e6",
+    "storage_bucket": "hello-girl-c22e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102910674873:android:31dfdfff26d5d30c",
+        "android_client_info": {
+          "package_name": "com.kan.mz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "102910674873-ub2am30gjo74di5f90b6j61rkmvvumln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBv5P7TFpUVE6T7nYfttng-WhjpIRagfnA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

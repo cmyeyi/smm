@@ -1,0 +1,521 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ResourceName">
+
+    <style name="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="ThemeActivity">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <style name="Toolbar">
+        <item name="android:textSize">@dimen/t18sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="divider_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/divide_line_color</item>
+    </style>
+
+    <style name="divider_line_px2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2px</item>
+        <item name="android:background">@color/black_5</item>
+    </style>
+
+    <style name="divider_line_px2_black4">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2px</item>
+        <item name="android:background">@color/black_4</item>
+    </style>
+
+    <style name="bottom_tab_rl">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">@dimen/bottom_tab_height_overflow</item>
+    </style>
+
+    <style name="bottom_tab_image">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">1dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="bottom_tab_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@drawable/tab_item_text_selector</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginBottom">@dimen/common_20dp</item>
+    </style>
+
+    <style name="item_action_button_text">
+        <item name="android:layout_width">@dimen/common_140dp</item>
+        <item name="android:layout_height">@dimen/common_25dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:background">@drawable/shape_button_action_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/t11sp</item>
+    </style>
+
+    <style name="item_action_button_text_recommend">
+        <item name="android:layout_width">@dimen/common_120dp</item>
+        <item name="android:layout_height">@dimen/common_27dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:background">@drawable/shape_button_of_recommend_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/theme_color</item>
+        <item name="android:textSize">@dimen/t11sp</item>
+    </style>
+
+    <style name="item_sub_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_color_ff999999</item>
+        <item name="android:textSize">@dimen/t12sp</item>
+    </style>
+    <style name="item_sub_text_v">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_color_ff999999</item>
+        <item name="android:textSize">@dimen/t13sp</item>
+    </style>
+
+    <style name="item_name_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_color_ff333333</item>
+        <item name="android:textSize">@dimen/t16sp</item>
+    </style>
+    <style name="item_amount_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/orangered</item>
+        <item name="android:textSize">@dimen/t14sp</item>
+    </style>
+
+    <style name="item_icon">
+        <item name="android:layout_width">@dimen/common_45dp</item>
+        <item name="android:layout_height">@dimen/common_45dp</item>
+    </style>
+
+    <style name="item_root_view_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/shape_button_action_bg</item>
+    </style>
+
+    <style name="style_title_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/common_30dp</item>
+        <item name="android:textColor">@color/detail_sub_text_color</item>
+        <item name="android:textSize">@dimen/t12sp</item>
+    </style>
+    <style name="forum_list_item_bottom_icon_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_color_ff666666</item>
+        <item name="android:textSize">@dimen/t12sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginRight">@dimen/common_10dp</item>
+        <item name="android:drawablePadding">@dimen/common_5dp</item>
+    </style>
+
+    <style name="forum_red_point">
+        <item name="android:layout_width">@dimen/common_15dp</item>
+        <item name="android:layout_height">@dimen/common_15dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">@dimen/common_10dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/t8sp</item>
+        <item name="android:hint">10</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@drawable/forum_notification_red_point_bg</item>
+    </style>
+
+    <style name="stages_detail_desc_title_text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/common_10dp</item>
+        <item name="android:textColor">@color/text_color_ff333333</item>
+        <item name="android:textSize">@dimen/t15sp</item>
+    </style>
+
+    <style name="stages_detail_desc_content_text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/common_5dp</item>
+        <item name="android:textColor">@color/text_color_ff666666</item>
+        <item name="android:textSize">@dimen/t12sp</item>
+    </style>
+
+    <!-- auth-->
+    <!-- Base application theme. -->
+    <style name="AuthTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/theme_color</item>
+        <item name="colorPrimaryDark">@color/theme_color</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AuthTheme.NoActionBar" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/theme_color</item>
+        <item name="colorPrimaryDark">@color/theme_color</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <!-- Activity with no Title -->
+    <style name="ThemeOverlay.MyNoTitleActivity" parent="AuthTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Dark Buttons -->
+    <style name="ThemeOverlay.MyDarkButton" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="colorButtonNormal">@color/colorAccent</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!-- Light EditTexts -->
+    <style name="ThemeOverlay.MyLightEditText" parent="ThemeOverlay.AppCompat.Dark" />
+
+    <style name="ThemeOverlay.MyTextDetail" parent="AuthTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fadeScrollbars">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">5</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ThemeOverlay.FirebaseIcon" parent="AuthTheme">
+        <item name="android:layout_marginTop">@dimen/icon_top_margin</item>
+        <item name="android:layout_marginBottom">@dimen/icon_bottom_margin</item>
+    </style>
+
+    <style name="ThemeOverlay.MyTitleText" parent="AuthTheme">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">36sp</item>
+    </style>
+
+
+    <style name="FirebaseUI" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:buttonStyle">@style/FirebaseUI.Button</item>
+    </style>
+
+    <style name="FirebaseUI.Transparent" parent="FirebaseUI">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="FirebaseUI.WrapperStyle">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingLeft">@dimen/fui_wrapper_padding_horiz</item>
+        <item name="android:paddingRight">@dimen/fui_wrapper_padding_horiz</item>
+    </style>
+
+    <style name="FirebaseUI.Text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="FirebaseUI.Text.T01" tools:ignore="UnusedResources">
+        <item name="android:textSize">112sp</item>
+    </style>
+
+    <style name="FirebaseUI.Text.T02" tools:ignore="UnusedResources">
+        <item name="android:textSize">64sp</item>
+    </style>
+
+    <style name="FirebaseUI.Text.T03" tools:ignore="UnusedResources">
+        <item name="android:textSize">48sp</item>
+    </style>
+
+    <style name="FirebaseUI.Text.T04" tools:ignore="UnusedResources">
+        <item name="android:textSize">36sp</item>
+        <item name="android:lineSpacingExtra">12sp</item>
+    </style>
+
+    <style name="FirebaseUI.Text.T05" tools:ignore="UnusedResources">
+        <item name="android:textSize">24sp</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+    </style>
+
+    <style name="FirebaseUI.Text.T06" tools:ignore="UnusedResources">
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+    </style>
+
+    <style name="FirebaseUI.Text.T07" tools:ignore="UnusedResources">
+        <item name="android:textSize">20sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="FirebaseUI.Text.T08" tools:ignore="UnusedResources">
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+    </style>
+
+    <style name="FirebaseUI.Text.T09" tools:ignore="UnusedResources">
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="FirebaseUI.Text.T11" tools:ignore="UnusedResources">
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="FirebaseUI.Text.T12" tools:ignore="UnusedResources">
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="FirebaseUI.Text.T13" tools:ignore="UnusedResources">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="FirebaseUI.Text.T14">
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:textColor">?android:attr/textColor</item>
+    </style>
+
+
+    <!-- Common styles -->
+    <style name="FirebaseUI.Button" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">end</item>
+    </style>
+
+    <style name="FirebaseUI.VerifyPhoneButton" parent="FirebaseUI.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="FirebaseUI.SMSTermsText" parent="FirebaseUI.Text.BodyText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">?android:textColorTertiary</item>
+    </style>
+
+    <style name="FirebaseUI.TextInputEditText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="FirebaseUI.TextInputEditText.EmailField">
+        <item name="android:inputType">textEmailAddress</item>
+    </style>
+
+    <style name="FirebaseUI.TextInputEditText.NameField">
+        <item name="android:inputType">textCapWords</item>
+    </style>
+
+    <style name="FirebaseUI.Text.Link">
+        <item name="android:textColor">@color/fui_linkColor</item>
+    </style>
+
+    <style name="FirebaseUI.Text.Heading" parent="FirebaseUI.Text.T07">
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">@dimen/fui_heading_padding_bottom</item>
+    </style>
+
+    <style name="FirebaseUI.Text.BodyText" parent="FirebaseUI.Text.T08">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">@dimen/fui_body_padding_bottom</item>
+    </style>
+
+    <style name="FirebaseUI.CountrySpinner" parent="@style/Widget.AppCompat.Spinner.Underlined">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="FirebaseUI.Button.AccountChooser">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:drawablePadding">@dimen/fui_auth_method_button_drawablePadding</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:layout_marginTop">@dimen/fui_auth_method_button_margin</item>
+        <item name="android:layout_marginBottom">@dimen/fui_auth_method_button_margin</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="FirebaseUI.Button.AccountChooser.EmailButton">
+        <item name="android:drawableLeft">@drawable/fui_ic_mail_white_24dp</item>
+        <item name="android:background">@drawable/fui_idp_button_background_email</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="FirebaseUI.Button.AccountChooser.PhoneButton">
+        <item name="android:drawableLeft">@drawable/fui_ic_phone_white_24dp</item>
+        <item name="android:background">@drawable/fui_idp_button_background_phone</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="FirebaseUI.Button.AccountChooser.GoogleButton">
+        <item name="android:drawableLeft">@drawable/fui_ic_googleg_color_24dp</item>
+        <item name="android:background">@drawable/fui_idp_button_background_google</item>
+        <item name="android:textColor">#757575</item>
+    </style>
+
+    <style name="FirebaseUI.Button.AccountChooser.FacebookButton">
+        <item name="android:drawableLeft">@drawable/fui_ic_facebook_white_22dp</item>
+        <item name="android:background">@drawable/fui_idp_button_background_facebook</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+    </style>
+
+    <style name="FirebaseUI.Button.AccountChooser.TwitterButton">
+        <item name="android:drawableLeft">@drawable/fui_ic_twitter_bird_white_24dp</item>
+        <item name="android:background">@drawable/fui_idp_button_background_twitter</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+    </style>
+
+    <style name="sing_out_text">
+        <item name="android:background">@drawable/fui_idp_button_background_twitter</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+    </style>
+
+    <!-- setting -->
+    <style name="mine_list_item_layout">
+        <item name="android:background">@drawable/bg_white_pressed</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+    </style>
+
+    <style name="mine_list_item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/t16sp</item>
+        <item name="android:textColor">@color/hex_222222</item>
+        <item name="android:drawablePadding">15dp</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="mine_contact_item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/t15sp</item>
+        <item name="android:textColor">@color/hex_222222</item>
+        <item name="android:drawablePadding">15dp</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="mine_contact_item_uri">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/t11sp</item>
+        <item name="android:textColor">#53a4f4</item>
+        <item name="android:drawablePadding">15dp</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="mine_qa_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/t11sp</item>
+        <item name="android:textColor">@color/hex_222222</item>
+        <item name="android:drawablePadding">15dp</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingRight">@dimen/common_15dp</item>
+    </style>
+
+    <style name="mine_qa_content">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/t11sp</item>
+        <item name="android:textColor">@color/hex_999999</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingBottom">@dimen/common_15dp</item>
+    </style>
+
+    <style name="mine_list_item_arrow">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#bbbbbb</item>
+        <item name="android:drawablePadding">9dp</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawableRight">@drawable/arrow_right_gray</item>
+    </style>
+    <!-- setting -->
+
+
+    <style name="Login.EditText" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/text_color_ff999999</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+
+    <style name="detail_action_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/common_45dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">@drawable/common_action_button_bg_selector</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/t18sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="recommend_stages_search_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/common_45dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginBottom">@dimen/common_5dp</item>
+        <item name="android:background">@drawable/search_button_bg_selector</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/t18sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Hello Girl</string>
+    <string name="app_v">Hello Girl V</string>
+
+    <string name="mian_title_text_0">妹子</string>
+    <string name="mian_title_text_1">帅哥</string>
+    <string name="mian_title_text_2">风景</string>
+
+    <string name="tab_num_error">tab number error</string>
+
+</resources>

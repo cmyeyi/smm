@@ -1,0 +1,158 @@
+<resources>
+
+    <dimen name="common_1dp">1dp</dimen>
+    <dimen name="common_2dp">2dp</dimen>
+    <dimen name="common_3dp">3dp</dimen>
+    <dimen name="common_4dp">4dp</dimen>
+    <dimen name="common_5dp">5dp</dimen>
+    <dimen name="common_6dp">6dp</dimen>
+    <dimen name="common_7dp">7dp</dimen>
+    <dimen name="common_8dp">8dp</dimen>
+    <dimen name="common_9dp">9dp</dimen>
+    <dimen name="common_10dp">10dp</dimen>
+    <dimen name="common_11dp">11dp</dimen>
+    <dimen name="common_13dp">13dp</dimen>
+    <dimen name="common_12dp">12dp</dimen>
+    <dimen name="common_14dp">14dp</dimen>
+    <dimen name="common_15dp">15dp</dimen>
+    <dimen name="common_16dp">16dp</dimen>
+    <dimen name="common_18dp">18dp</dimen>
+    <dimen name="common_20dp">20dp</dimen>
+    <dimen name="common_21dp">21dp</dimen>
+    <dimen name="common_22dp">22dp</dimen>
+    <dimen name="common_23dp">23dp</dimen>
+    <dimen name="common_24dp">24dp</dimen>
+    <dimen name="common_25dp">25dp</dimen>
+    <dimen name="common_26dp">26dp</dimen>
+    <dimen name="common_27dp">27dp</dimen>
+    <dimen name="common_28dp">28dp</dimen>
+    <dimen name="common_30dp">30dp</dimen>
+    <dimen name="common_32dp">32dp</dimen>
+    <dimen name="common_33dp">33dp</dimen>
+    <dimen name="common_34dp">34dp</dimen>
+    <dimen name="common_35dp">35dp</dimen>
+    <dimen name="common_36dp">36dp</dimen>
+    <dimen name="common_37dp">37dp</dimen>
+    <dimen name="common_38dp">38dp</dimen>
+    <dimen name="common_40dp">40dp</dimen>
+    <dimen name="common_41dp">41dp</dimen>
+    <dimen name="common_42dp">42dp</dimen>
+    <dimen name="common_43dp">43dp</dimen>
+    <dimen name="common_44dp">44dp</dimen>
+    <dimen name="common_45dp">45dp</dimen>
+    <dimen name="common_48dp">48dp</dimen>
+    <dimen name="common_49dp">49dp</dimen>
+    <dimen name="common_50dp">50dp</dimen>
+    <dimen name="common_52dp">52dp</dimen>
+    <dimen name="common_54dp">54dp</dimen>
+    <dimen name="common_55dp">55dp</dimen>
+    <dimen name="common_56dp">56dp</dimen>
+    <dimen name="common_58dp">58dp</dimen>
+    <dimen name="common_60dp">60dp</dimen>
+    <dimen name="common_62dp">62dp</dimen>
+    <dimen name="common_64dp">64dp</dimen>
+    <dimen name="common_65dp">65dp</dimen>
+    <dimen name="common_66dp">65dp</dimen>
+    <dimen name="common_70dp">70dp</dimen>
+    <dimen name="common_72dp">72dp</dimen>
+    <dimen name="common_75dp">75dp</dimen>
+    <dimen name="common_80dp">80dp</dimen>
+    <dimen name="common_85dp">85dp</dimen>
+    <dimen name="common_88dp">88dp</dimen>
+    <dimen name="common_90dp">90dp</dimen>
+    <dimen name="common_95dp">95dp</dimen>
+    <dimen name="common_100dp">100dp</dimen>
+    <dimen name="common_103.5dp">103.5dp</dimen>
+    <dimen name="common_105dp">105dp</dimen>
+    <dimen name="common_106dp">106dp</dimen>
+    <dimen name="common_108dp">108dp</dimen>
+    <dimen name="common_112dp">112dp</dimen>
+    <dimen name="common_115dp">115dp</dimen>
+    <dimen name="common_118dp">118dp</dimen>
+    <dimen name="common_120dp">120dp</dimen>
+    <dimen name="common_123dp">123dp</dimen>
+    <dimen name="common_124dp">124dp</dimen>
+    <dimen name="common_130dp">130dp</dimen>
+    <dimen name="common_133dp">133dp</dimen>
+    <dimen name="common_135dp">135dp</dimen>
+    <dimen name="common_140dp">140dp</dimen>
+    <dimen name="common_147dp">147dp</dimen>
+    <dimen name="common_154dp">154dp</dimen>
+    <dimen name="common_155dp">155dp</dimen>
+    <dimen name="common_157dp">157dp</dimen>
+    <dimen name="common_164dp">164dp</dimen>
+    <dimen name="common_167dp">167dp</dimen>
+    <dimen name="common_168dp">168dp</dimen>
+    <dimen name="common_170dp">170dp</dimen>
+    <dimen name="common_175dp">175dp</dimen>
+    <dimen name="common_180dp">180dp</dimen>
+    <dimen name="common_195dp">195dp</dimen>
+    <dimen name="common_210dp">210dp</dimen>
+    <dimen name="common_230dp">230dp</dimen>
+    <dimen name="common_234dp">234dp</dimen>
+    <dimen name="common_256dp">256dp</dimen>
+    <dimen name="common_260dp">260dp</dimen>
+    <dimen name="common_280dp">280dp</dimen>
+    <dimen name="common_300dp">300dp</dimen>
+
+    <!-- 字体 -->
+    <dimen name="t8sp">8sp</dimen>
+    <dimen name="t9sp">9sp</dimen>
+    <dimen name="t10sp">10sp</dimen>
+    <dimen name="t11sp">11sp</dimen>
+    <dimen name="t12sp">12sp</dimen>
+    <dimen name="t13sp">13sp</dimen>
+    <dimen name="t14sp">14sp</dimen>
+    <dimen name="t15sp">15sp</dimen>
+    <dimen name="t16sp">16sp</dimen>
+    <dimen name="t17sp">17sp</dimen>
+    <dimen name="t18sp">18sp</dimen>
+    <dimen name="t19sp">19sp</dimen>
+    <dimen name="t20sp">20sp</dimen>
+    <dimen name="t21sp">21sp</dimen>
+    <dimen name="t22sp">22sp</dimen>
+    <dimen name="t23sp">23sp</dimen>
+    <dimen name="t24sp">24sp</dimen>
+    <dimen name="t25sp">25sp</dimen>
+    <dimen name="t26sp">26sp</dimen>
+    <dimen name="t30sp">30sp</dimen>
+    <dimen name="t40sp">40sp</dimen>
+
+    <dimen name="tab_icon_size">24dp</dimen>
+    <dimen name="tab_icon_size_big">36dp</dimen>
+
+    <dimen name="red_dot">7dp</dimen>
+
+
+    <dimen name="bottom_tab_height_overflow">80dp</dimen>
+    <dimen name="bottom_tab_image_height">50dp</dimen>
+    <dimen name="bottom_tab_height">50dp</dimen>
+    <dimen name="bottom_tab_root_height">51dp</dimen>
+
+
+
+    <!-- auth 20171207 -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="icon_top_margin">24dp</dimen>
+    <dimen name="icon_bottom_margin">24dp</dimen>
+    <dimen name="title_bottom_margin">16dp</dimen>
+    <dimen name="field_width_standard">160dp</dimen>
+    <dimen name="fui_auth_method_button_width">208dp</dimen>
+    <dimen name="fui_auth_method_button_margin">4dp</dimen>
+    <dimen name="fui_auth_method_button_drawablePadding">12dp</dimen>
+
+    <dimen name="fui_body_padding_bottom">12dp</dimen>
+    <dimen name="fui_heading_padding_bottom">12dp</dimen>
+    <dimen name="fui_wrapper_padding_horiz">16dp</dimen>
+    <dimen name="fui_field_padding_vert">16dp</dimen>
+    <dimen name="fui_submit_button_margin_top">24dp</dimen>
+
+    <dimen name="fui_button_inset_top">1dp</dimen>
+    <dimen name="fui_button_inset_bottom">0dp</dimen>
+    <dimen name="fui_button_inset_left">1dp</dimen>
+    <dimen name="fui_button_inset_right">1dp</dimen>
+    <!-- auth 20171207 -->
+
+</resources>

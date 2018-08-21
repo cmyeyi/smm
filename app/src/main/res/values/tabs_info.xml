@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--app首页FragmentTabHost TabHost Tag-->
+    <string name="mian_tab_0">美图</string>
+    <string name="mian_tab_1">搜索</string>
+    <string name="mian_tab_2">贴吧</string>
+    <string name="mian_tab_3">我的</string>
+
+    <string-array name="main_tab_tags">
+        <item>@string/mian_tab_0</item>
+        <item>@string/mian_tab_1</item>
+        <item>@string/mian_tab_2</item>
+        <item>@string/mian_tab_3</item>
+    </string-array>
+</resources>

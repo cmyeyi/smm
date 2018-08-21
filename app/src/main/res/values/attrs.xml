@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundCornerRelativeLayout">
+        <attr name="roundCornerRadius" format="dimension" />
+        <attr name="backgroudColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="EnhancedImageView">
+        <attr name="roundRadius" format="dimension" />
+        <attr name="ratio" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="MaterialProgressView">
+        <!-- 圆环颜色(单色) -->
+        <attr name="ringColor" format="color" />
+        <!-- 圆环圆形背景色 -->
+        <attr name="ringBackgroundColor" format="color" />
+        <!-- 圆环圆形前景色 -->
+        <attr name="ringForegroundColor" format="color" />
+        <!-- 圆环的边距占整个背景的百分比, 设置为 <= 0f 表示圆环填满整个背景 (没有边距),
+         设置为 >= 1f 表示圆环的边距填满整个背景 (不显示圆环) -->
+        <attr name="ringPaddingPercentage" format="float" />
+        <!-- 设置圆环的宽度占圆环半径的百分比, 设置为 <= 0f 表示圆环宽度为 1px, 设置为 >= 1f 表示圆环宽度为半径 -->
+        <attr name="ringStrokeWidthPercentage" format="float" />
+        <!-- 转一圈的动画时长 (毫秒) -->
+        <attr name="animationDuration" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="Banner">
+        <!-- 指示点容器背景 -->
+        <attr name="banner_pointContainerBackground" format="reference|color" />
+        <!-- 指示点背景 -->
+        <attr name="banner_pointDrawable" format="reference" />
+        <!-- 指示点容器左右内间距 -->
+        <attr name="banner_pointContainerLeftRightPadding" format="dimension" />
+        <!-- 指示点上下外间距 -->
+        <attr name="banner_pointTopBottomMargin" format="dimension" />
+        <!-- 指示点左右外间距 -->
+        <attr name="banner_pointLeftRightMargin" format="dimension" />
+        <!-- 指示点的位置 -->
+        <attr name="banner_pointGravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+            <flag name="center_horizontal" value="0x01" />
+        </attr>
+        <!-- 自动轮播的时间间隔 -->
+        <attr name="banner_pointAutoPlayInterval" format="integer" />
+        <!-- 页码切换过程的时间长度 -->
+        <attr name="banner_pageChangeDuration" format="integer" />
+        <!-- 提示文案的文字颜色 -->
+        <attr name="banner_tipTextColor" format="reference|color" />
+        <!-- 提示文案的文字大小 -->
+        <attr name="banner_tipTextSize" format="dimension" />
+        <!--viewPager 内padding-->
+        <attr name="banner_ViewPager_padding" format="dimension" />
+    </declare-styleable>
+</resources>

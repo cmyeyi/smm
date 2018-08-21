@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pintar_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_45dp"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:id="@+id/fl_real_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_marginBottom="@dimen/bottom_tab_height"
+        android:orientation="vertical" />
+
+
+    <com.can.mz.view.FragmentTabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_tab_height_overflow"
+            android:background="@android:color/transparent"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_above="@android:id/tabs"
+                android:background="@color/hex_d6d6d6" />
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bottom_tab_height"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:divider="@null"
+                android:gravity="center_vertical" />
+
+
+        </RelativeLayout>
+    </com.can.mz.view.FragmentTabHost>
+
+    <include
+        android:id="@+id/main_big_card_lr"
+        layout="@layout/activity_main_big_card_layout"
+        android:visibility="gone"/>
+
+</RelativeLayout>
