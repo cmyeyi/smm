@@ -20,6 +20,8 @@ import android.widget.TextView;
 import com.can.mz.base.BaseActivity;
 import com.can.mz.fragment.FragmentMain;
 import com.can.mz.fragment.FragmentOne;
+import com.can.mz.fragment.FragmentThree;
+import com.can.mz.fragment.FragmentTwo;
 import com.can.mz.view.FragmentTabHost;
 
 import java.lang.ref.WeakReference;
@@ -114,7 +116,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private void initTabFragment() {
         TAB_TAG = getResources().getStringArray(R.array.main_tab_tags);
         int[] tabLayouts = {R.layout.tab_item_main, R.layout.tab_item_tools, R.layout.tab_item_forum, R.layout.tab_item_mine};
-        Class[] fragmentClasses = {FragmentMain.class, FragmentOne.class, FragmentOne.class, FragmentOne.class};
+        Class[] fragmentClasses = {FragmentMain.class, FragmentOne.class, FragmentTwo.class, FragmentThree.class};
         Bundle[] bundles = {new Bundle(), new Bundle(), new Bundle(), new Bundle()};
         if (TAB_TAG.length != fragmentClasses.length || TAB_TAG.length != tabLayouts.length) {
             throw new IllegalStateException(getString(R.string.tab_num_error));
