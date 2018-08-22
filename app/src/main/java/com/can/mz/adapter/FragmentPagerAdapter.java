@@ -1,4 +1,4 @@
-package com.can.mz.view;
+package com.can.mz.adapter;
 
 import android.content.Context;
 import android.os.Bundle;

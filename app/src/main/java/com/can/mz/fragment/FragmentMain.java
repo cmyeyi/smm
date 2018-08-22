@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import com.can.mz.MainActivity;
 import com.can.mz.R;
 import com.can.mz.base.BaseFragment;
-import com.can.mz.view.FragmentPagerAdapter;
+import com.can.mz.adapter.FragmentPagerAdapter;
 import com.can.mz.view.SimpleViewPagerIndicator;
 
 import java.lang.reflect.Field;
@@ -24,20 +24,13 @@ public class FragmentMain extends BaseFragment implements View.OnClickListener {
     public static final String TAG = FragmentMain.class.getSimpleName();
     private SimpleViewPagerIndicator mIndicator;
     private ViewPager mViewPager;
-    private Fragment currentFragment;
-    private final int PAGE_ONE = 0;
-    private final int PAGE_TWO = 1;
-    private final int PAGE_THREE = 2;
-    private FragmentOne fragmentOne;
-    private FragmentTwo fragmentTwo;
-    private FragmentThree fragmentThree;
-    
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         setActionBarTitle();
         View view = inflater.inflate(R.layout.layout_fragment_main, null);
-        mViewPager = (ViewPager) view.findViewById(R.id.main_view_pager);
-        mIndicator = (SimpleViewPagerIndicator) view.findViewById(R.id.main_sliding_trip);
+        mViewPager = view.findViewById(R.id.main_view_pager);
+        mIndicator = view.findViewById(R.id.main_sliding_trip);
         initViewPager();
         return view;
     }
