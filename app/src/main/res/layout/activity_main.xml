@@ -59,9 +59,4 @@
         </RelativeLayout>
     </com.can.mz.view.FragmentTabHost>
 
-    <include
-        android:id="@+id/main_big_card_lr"
-        layout="@layout/activity_main_big_card_layout"
-        android:visibility="gone"/>
-
 </RelativeLayout>

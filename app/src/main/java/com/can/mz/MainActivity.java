@@ -9,13 +9,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.Toolbar;
-import android.text.Html;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TabHost;
 import android.widget.TabWidget;
-import android.widget.TextView;
 
 import com.can.mz.base.BaseActivity;
 import com.can.mz.fragment.FragmentMain;
@@ -36,7 +34,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     public static final int TAB_MINE = 3;
     private FragmentTabHost mFragmentTabHost;
     private boolean hasRedSpot = false;
-    private View mBigCardView;
 
     public static void launch(Context context) {
         Intent i = new Intent(context, MainActivity.class);
@@ -68,23 +65,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mFragmentTabHost.setCurrentTab(index);
     }
 
-    private void initBigCardView() {
-        mBigCardView = findViewById(R.id.main_big_card_lr);
-        TextView contentView = findViewById(R.id.main_big_tv);
-        contentView.setText(Html.fromHtml(""));
-        mBigCardView.setVisibility(View.VISIBLE);
-        mBigCardView.setOnClickListener(this);
-        findViewById(R.id.big_card_close).setOnClickListener(this);
-        contentView.setOnClickListener(this);
-    }
-
-    private void hideBigCard() {
-        if (mBigCardView != null) {
-            mBigCardView.setVisibility(View.GONE);
-        }
-    }
-
-
     private void initToolBar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -115,7 +95,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private void initTabFragment() {
         TAB_TAG = getResources().getStringArray(R.array.main_tab_tags);
-        int[] tabLayouts = {R.layout.tab_item_main, R.layout.tab_item_tools, R.layout.tab_item_forum, R.layout.tab_item_mine};
+        int[] tabLayouts = {R.layout.tab_item_main, R.layout.tab_item_girl, R.layout.tab_item_boy, R.layout.tab_item_scenery};
         Class[] fragmentClasses = {FragmentMain.class, FragmentOne.class, FragmentTwo.class, FragmentThree.class};
         Bundle[] bundles = {new Bundle(), new Bundle(), new Bundle(), new Bundle()};
         if (TAB_TAG.length != fragmentClasses.length || TAB_TAG.length != tabLayouts.length) {
@@ -170,16 +150,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.main_big_tv:
-                hideBigCard();
-                mFragmentTabHost.setCurrentTab(2);
-                break;
-            case R.id.main_big_card_lr:
-            case R.id.big_card_close:
-                hideBigCard();
-                break;
-        }
     }
 
     /**

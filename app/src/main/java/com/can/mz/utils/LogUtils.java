@@ -7,7 +7,7 @@ import com.can.mz.BuildConfig;
 
 public class LogUtils {
 
-    private static final String TAG = "PINART";
+    private static final String TAG = "LogUtils";
 
     public static void log(String format, Object... args) {
         if (TextUtils.isEmpty(format)) {
