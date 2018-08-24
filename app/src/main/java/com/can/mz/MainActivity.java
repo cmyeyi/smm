@@ -28,9 +28,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     public static final String TAG = "MainActivity";
     private static String[] TAB_TAG;
-    public static final int TAB_UANG = 0;
-    public static final int TAB_BELI = 1;
-    public static final int TAB_KEND = 2;
+    public static final int TAB_GIRL = 0;
+    public static final int TAB_BOY = 1;
+    public static final int TAB_SCENERY = 2;
     public static final int TAB_MINE = 3;
     private FragmentTabHost mFragmentTabHost;
     private boolean hasRedSpot = false;
@@ -58,7 +58,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private void initView() {
         initToolBar();
-        mFragmentTabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
+        mFragmentTabHost = findViewById(android.R.id.tabhost);
         mFragmentTabHost.setup(this, getSupportFragmentManager(), R.id.fl_real_content);
         int index = handleIntent(getIntent());
         initTabFragment();
@@ -79,12 +79,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         if (intent != null && intent.getData() != null) {
             Uri uri = intent.getData();
             String path = uri.getPath();
-            if (path.contains("tab_uang")) {
-                tab = TAB_UANG;
-            } else if (path.contains("tab_beli")) {
-                tab = TAB_BELI;
-            } else if (path.contains("tab_kend")) {
-                tab = TAB_KEND;
+            if (path.contains("tab_scenery")) {
+                tab = TAB_SCENERY;
+            } else if (path.contains("tab_girl")) {
+                tab = TAB_GIRL;
+            } else if (path.contains("tab_boy")) {
+                tab = TAB_BOY;
             } else {
                 tab = TAB_MINE;
             }
@@ -126,9 +126,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     }
 
     private int getIndexOfTabs(String tabId) {
-        if(TAB_TAG != null && TAB_TAG.length > 0) {
-            for(int i = 0; i< TAB_TAG.length;i++) {
-                if(tabId.equals(TAB_TAG[i])) {
+        if (TAB_TAG != null && TAB_TAG.length > 0) {
+            for (int i = 0; i < TAB_TAG.length; i++) {
+                if (tabId.equals(TAB_TAG[i])) {
                     return i;
                 }
             }

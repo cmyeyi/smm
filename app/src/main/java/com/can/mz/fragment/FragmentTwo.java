@@ -55,7 +55,7 @@ public class FragmentTwo extends BaseFragment implements View.OnClickListener {
     }
 
     private ArrayList<String> getData() {
-        return getFromAssets("source.txt");
+        return getFromAssets("boy.txt");
     }
 
     public ArrayList<String> getFromAssets(String fileName) {

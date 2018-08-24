@@ -1,6 +1,5 @@
 package com.can.mz.fragment;
 
-import android.graphics.Canvas;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -63,7 +62,7 @@ public class FragmentOne extends BaseFragment implements View.OnClickListener {
     }
 
     private ArrayList<String> getData() {
-        return getFromAssets("source.txt");
+        return getFromAssets("girl.txt");
     }
 
     public ArrayList<String> getFromAssets(String fileName) {
