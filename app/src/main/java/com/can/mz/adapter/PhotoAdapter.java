@@ -13,10 +13,10 @@ import com.can.mz.utils.ImageLoadUtils;
 
 import java.util.ArrayList;
 
-public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.BaseViewHolder> {
+public class PhotoAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
     public interface OnRecyclerViewItemClickListener {
-        void onItemClickListener(View v,int position);
+        void onItemClickListener(View v, int position);
 
     }
 
@@ -26,6 +26,7 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.BaseViewHold
     public PhotoAdapter(OnRecyclerViewItemClickListener itemClickListener) {
         mItemClickListener = itemClickListener;
     }
+
     public void replaceAll(ArrayList<String> list) {
         dataList.clear();
         if (list != null && list.size() > 0) {
@@ -35,14 +36,14 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.BaseViewHold
     }
 
     @Override
-    public PhotoAdapter.BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View layout = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_one, parent, false);
         OneViewHolder viewHolder = new OneViewHolder(layout);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(PhotoAdapter.BaseViewHolder holder, int position) {
+    public void onBindViewHolder(BaseViewHolder holder, int position) {
         holder.setData(position);
     }
 
@@ -51,14 +52,6 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.BaseViewHold
         return dataList != null ? dataList.size() : 0;
     }
 
-    public class BaseViewHolder extends RecyclerView.ViewHolder {
-        public BaseViewHolder(View itemView) {
-            super(itemView);
-        }
-
-        void setData(int position) {
-        }
-    }
 
     private class OneViewHolder extends BaseViewHolder {
         private ImageView ivImage;
