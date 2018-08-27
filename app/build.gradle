@@ -101,5 +101,5 @@ dependencies {
     compile 'io.reactivex:rxjava:1.1.0'
     compile 'io.reactivex:rxandroid:1.1.0'
     compile project(':image-preview')
-    compile project(path: ':permissionshelper')
+    compile project(path: ':permissions')
 }

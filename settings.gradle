@@ -1,1 +1,1 @@
-include ':app',':image-preview', ':permissionshelper'
+include ':app',':image-preview', ':permissions'
