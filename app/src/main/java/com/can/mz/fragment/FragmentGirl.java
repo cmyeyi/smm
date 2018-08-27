@@ -11,6 +11,8 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
+
+import com.can.mz.view.MultiDividerItemDecoration;
 import com.dmcc.image_preview.ImagePreviewActivity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +26,7 @@ import java.io.InputStreamReader;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 
-public class FragmentOne extends BaseFragment implements View.OnClickListener {
+public class FragmentGirl extends BaseFragment implements View.OnClickListener {
 
     private View mRootView;
     private SwipeRefreshLayout mSwipeLayout;
@@ -48,24 +50,25 @@ public class FragmentOne extends BaseFragment implements View.OnClickListener {
         //添加默认的动画（看起来似乎没什么特别的效果）
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL));
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
-        //添加竖向分割线
-        mRecyclerView.addItemDecoration(new DividerItemDecoration(getContext(),DividerItemDecoration.VERTICAL));
         //添加横向分割线
-        mRecyclerView.addItemDecoration(new DividerItemDecoration(getContext(),DividerItemDecoration.HORIZONTAL));
+        mRecyclerView.addItemDecoration(new MultiDividerItemDecoration(getContext(),MultiDividerItemDecoration.HORIZONTAL));
+        //添加竖向分割线
+        mRecyclerView.addItemDecoration(new MultiDividerItemDecoration(getContext(),MultiDividerItemDecoration.VERTICAL));
 
         adapter = new PhotoAdapter(new PhotoAdapter.OnRecyclerViewItemClickListener() {
             @Override
             public void onItemClickListener(View v, int position) {
-                ArrayList<String> total = getData();
-                ArrayList<String> gallery = new ArrayList<>();
+//                ArrayList<String> total = getData();
+//                ArrayList<String> gallery = new ArrayList<>();
+//
+//
+//                for(int i = position; i< position + 100 && position + 100 <= total.size(); i++) {
+//                    gallery.add(total.get(i));
+//                }
+//
+//                ImagePreviewActivity.startActivity(getActivity(), gallery.get(0), gallery);
+                ImagePreviewActivity.startActivity(getActivity(), getData().get(position), getData());
 
-
-                for(int i = position; i< position + 100 && position + 100 <= total.size(); i++) {
-                    gallery.add(total.get(i));
-                }
-
-                ImagePreviewActivity.startActivity(getActivity(), gallery.get(0), gallery);
             }
         });
         mRecyclerView.setAdapter(adapter);

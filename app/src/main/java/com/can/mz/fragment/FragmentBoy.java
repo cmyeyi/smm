@@ -8,7 +8,6 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,12 +22,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
 
-public class FragmentThree extends BaseFragment implements View.OnClickListener {
+public class FragmentBoy extends BaseFragment implements View.OnClickListener {
 
     private View mRootView;
     private SwipeRefreshLayout mSwipeLayout;
@@ -65,7 +60,7 @@ public class FragmentThree extends BaseFragment implements View.OnClickListener 
     }
 
     private ArrayList<String> getData() {
-        return getFromAssets("scenery.txt");
+        return getFromAssets("boy.txt");
     }
 
     public ArrayList<String> getFromAssets(String fileName) {

@@ -14,15 +14,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TabHost;
 import android.widget.TabWidget;
+import android.widget.Toast;
 
 import com.can.mz.base.BaseActivity;
 import com.can.mz.fragment.FragmentMain;
-import com.can.mz.fragment.FragmentOne;
-import com.can.mz.fragment.FragmentThree;
-import com.can.mz.fragment.FragmentTwo;
+import com.can.mz.fragment.FragmentGirl;
+import com.can.mz.fragment.FragmentScenery;
+import com.can.mz.fragment.FragmentBoy;
 import com.can.mz.view.FragmentTabHost;
+import com.tech.aile.permission.OnPermission;
+import com.tech.aile.permission.Permission;
+import com.tech.aile.permission.PermissionsHelper;
 
 import java.lang.ref.WeakReference;
+import java.util.List;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
@@ -96,7 +101,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private void initTabFragment() {
         TAB_TAG = getResources().getStringArray(R.array.main_tab_tags);
         int[] tabLayouts = {R.layout.tab_item_main, R.layout.tab_item_girl, R.layout.tab_item_boy, R.layout.tab_item_scenery};
-        Class[] fragmentClasses = {FragmentMain.class, FragmentOne.class, FragmentTwo.class, FragmentThree.class};
+        Class[] fragmentClasses = {FragmentMain.class, FragmentGirl.class, FragmentBoy.class, FragmentScenery.class};
         Bundle[] bundles = {new Bundle(), new Bundle(), new Bundle(), new Bundle()};
         if (TAB_TAG.length != fragmentClasses.length || TAB_TAG.length != tabLayouts.length) {
             throw new IllegalStateException(getString(R.string.tab_num_error));
@@ -177,5 +182,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         }
 
     }
+
+
 
 }

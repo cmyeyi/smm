@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import com.can.mz.R;
 import com.can.mz.adapter.PhotoAdapter;
 import com.can.mz.base.BaseFragment;
+import com.can.mz.view.MultiDividerItemDecoration;
 import com.dmcc.image_preview.ImagePreviewActivity;
 
 import java.io.BufferedReader;
@@ -23,7 +24,7 @@ import java.io.InputStreamReader;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 
-public class FragmentTwo extends BaseFragment implements View.OnClickListener {
+public class FragmentOther extends BaseFragment implements View.OnClickListener {
 
     private View mRootView;
     private SwipeRefreshLayout mSwipeLayout;
@@ -45,10 +46,10 @@ public class FragmentTwo extends BaseFragment implements View.OnClickListener {
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.main_recyler_view);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL));
-        //添加竖向分割线
-        mRecyclerView.addItemDecoration(new DividerItemDecoration(getContext(),DividerItemDecoration.VERTICAL));
         //添加横向分割线
-        mRecyclerView.addItemDecoration(new DividerItemDecoration(getContext(),DividerItemDecoration.HORIZONTAL));
+        mRecyclerView.addItemDecoration(new MultiDividerItemDecoration(getContext(),MultiDividerItemDecoration.HORIZONTAL));
+        //添加竖向分割线
+        mRecyclerView.addItemDecoration(new MultiDividerItemDecoration(getContext(),MultiDividerItemDecoration.VERTICAL));
         adapter = new PhotoAdapter(new PhotoAdapter.OnRecyclerViewItemClickListener() {
             @Override
             public void onItemClickListener(View v, int position) {
@@ -60,7 +61,7 @@ public class FragmentTwo extends BaseFragment implements View.OnClickListener {
     }
 
     private ArrayList<String> getData() {
-        return getFromAssets("boy.txt");
+        return getFromAssets("scenery.txt");
     }
 
     public ArrayList<String> getFromAssets(String fileName) {
