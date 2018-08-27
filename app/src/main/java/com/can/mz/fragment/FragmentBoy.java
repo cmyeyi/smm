@@ -16,6 +16,7 @@ import com.can.mz.R;
 import com.can.mz.adapter.PhotoAdapter;
 import com.can.mz.base.BaseFragment;
 import com.can.mz.utils.PermissionManager;
+import com.can.mz.view.MultiDividerItemDecoration;
 import com.dmcc.image_preview.ImagePreviewActivity;
 import com.tech.aile.permission.Permission;
 
@@ -48,9 +49,9 @@ public class FragmentBoy extends BaseFragment implements View.OnClickListener {
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL));
         //添加竖向分割线
-        mRecyclerView.addItemDecoration(new DividerItemDecoration(getContext(),DividerItemDecoration.VERTICAL));
+        mRecyclerView.addItemDecoration(new MultiDividerItemDecoration(getContext(),MultiDividerItemDecoration.VERTICAL));
         //添加横向分割线
-        mRecyclerView.addItemDecoration(new DividerItemDecoration(getContext(),DividerItemDecoration.HORIZONTAL));
+        mRecyclerView.addItemDecoration(new MultiDividerItemDecoration(getContext(),MultiDividerItemDecoration.HORIZONTAL));
         adapter = new PhotoAdapter(new PhotoAdapter.OnRecyclerViewItemClickListener() {
             @Override
             public void onItemClickListener(View v, int position) {

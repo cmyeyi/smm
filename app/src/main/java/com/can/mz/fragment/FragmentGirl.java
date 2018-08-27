@@ -6,21 +6,18 @@ import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
-
-import com.can.mz.utils.PermissionManager;
-import com.can.mz.view.MultiDividerItemDecoration;
-import com.dmcc.image_preview.ImagePreviewActivity;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.can.mz.R;
 import com.can.mz.adapter.PhotoAdapter;
 import com.can.mz.base.BaseFragment;
+import com.can.mz.utils.PermissionManager;
+import com.dmcc.image_preview.ImagePreviewActivity;
 import com.tech.aile.permission.Permission;
 
 import java.io.BufferedReader;
@@ -54,9 +51,9 @@ public class FragmentGirl extends BaseFragment implements View.OnClickListener {
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL));
         //添加横向分割线
-        mRecyclerView.addItemDecoration(new MultiDividerItemDecoration(getContext(),MultiDividerItemDecoration.HORIZONTAL));
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(getContext(),DividerItemDecoration.HORIZONTAL));
         //添加竖向分割线
-        mRecyclerView.addItemDecoration(new MultiDividerItemDecoration(getContext(),MultiDividerItemDecoration.VERTICAL));
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(getContext(),DividerItemDecoration.VERTICAL));
 
         adapter = new PhotoAdapter(new PhotoAdapter.OnRecyclerViewItemClickListener() {
             @Override
