@@ -3,6 +3,7 @@ package com.can.mz.view;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
@@ -11,11 +12,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.can.mz.R;
+
 /**
  * Created by hq on 2018/8/26.
  */
 
 public class MultiDividerItemDecoration extends RecyclerView.ItemDecoration {
+
+    private Context context;
     public static final int HORIZONTAL = LinearLayout.HORIZONTAL;
     public static final int VERTICAL = LinearLayout.VERTICAL;
 
@@ -29,6 +34,7 @@ public class MultiDividerItemDecoration extends RecyclerView.ItemDecoration {
     private final Rect mBounds = new Rect();
 
     public MultiDividerItemDecoration(Context context, int orientation) {
+        this.context = context;
         final TypedArray a = context.obtainStyledAttributes(ATTRS);
         mDivider = a.getDrawable(0);
         if (mDivider == null) {
@@ -124,17 +130,34 @@ public class MultiDividerItemDecoration extends RecyclerView.ItemDecoration {
     public void getItemOffsets(Rect outRect, View view, RecyclerView parent,
                                RecyclerView.State state) {
         if (mDivider == null) {
-            Log.d("###","" + "mDivider == null");
             outRect.set(0, 0, 0, 0);
             return;
         }
         if (mOrientation == VERTICAL) {
             outRect.set(0, 0, 0, mDivider.getIntrinsicHeight());
-            Log.d("###height","" + mDivider.getIntrinsicHeight());
         } else {
             outRect.set(0, 0, mDivider.getIntrinsicWidth(), 0);
-            Log.d("### width","" + mDivider.getIntrinsicWidth());
         }
+    }
+
+    @Override
+    public void onDrawOver(Canvas c, RecyclerView parent, RecyclerView.State state) {
+        super.onDrawOver(c, parent, state);
+        int childCount = parent.getChildCount();
+        for (int i = 0; i < childCount; i++) {
+            View child = parent.getChildAt(i);
+            int pos = parent.getChildAdapterPosition(child);
+            if (pos % 3 == 0){
+                Paint paint = new Paint();
+                paint.setColor(context.getResources().getColor(R.color.gold));
+                float left = child.getLeft() + 24;
+                float right = left + 100;
+                float top = child.getTop() + 24;
+                float bottom = top + 100;
+                c.drawRect(left, top, right, bottom, paint);
+            }
+        }
+
     }
 
 }
