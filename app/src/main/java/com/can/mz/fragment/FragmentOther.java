@@ -15,8 +15,10 @@ import android.view.ViewGroup;
 import com.can.mz.R;
 import com.can.mz.adapter.PhotoAdapter;
 import com.can.mz.base.BaseFragment;
+import com.can.mz.utils.PermissionManager;
 import com.can.mz.view.MultiDividerItemDecoration;
 import com.dmcc.image_preview.ImagePreviewActivity;
+import com.tech.aile.permission.Permission;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -53,7 +55,11 @@ public class FragmentOther extends BaseFragment implements View.OnClickListener 
         adapter = new PhotoAdapter(new PhotoAdapter.OnRecyclerViewItemClickListener() {
             @Override
             public void onItemClickListener(View v, int position) {
-                ImagePreviewActivity.startActivity(getActivity(), getData().get(position), getData());
+                if (PermissionManager.isHasPermission(getActivity(), Permission.Group.STORAGE)) {
+                    ImagePreviewActivity.startActivity(getActivity(), getData().get(position), getData());
+                } else {
+                    PermissionManager.requestPermission(getActivity(), Permission.Group.STORAGE);
+                }
             }
         });
         mRecyclerView.setAdapter(adapter);

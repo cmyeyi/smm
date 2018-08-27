@@ -12,6 +12,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 
+import com.can.mz.utils.PermissionManager;
 import com.can.mz.view.MultiDividerItemDecoration;
 import com.dmcc.image_preview.ImagePreviewActivity;
 import android.view.View;
@@ -20,6 +21,8 @@ import android.view.ViewGroup;
 import com.can.mz.R;
 import com.can.mz.adapter.PhotoAdapter;
 import com.can.mz.base.BaseFragment;
+import com.tech.aile.permission.Permission;
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -67,7 +70,11 @@ public class FragmentGirl extends BaseFragment implements View.OnClickListener {
 //                }
 //
 //                ImagePreviewActivity.startActivity(getActivity(), gallery.get(0), gallery);
-                ImagePreviewActivity.startActivity(getActivity(), getData().get(position), getData());
+                if (PermissionManager.isHasPermission(getActivity(), Permission.Group.STORAGE)) {
+                    ImagePreviewActivity.startActivity(getActivity(), getData().get(position), getData());
+                } else {
+                    PermissionManager.requestPermission(getActivity(), Permission.Group.STORAGE);
+                }
 
             }
         });
