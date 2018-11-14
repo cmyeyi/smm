@@ -18,6 +18,7 @@ import android.widget.Button;
 
 import com.can.mz.R;
 import com.can.mz.base.BaseFragment;
+import com.yalantis.ucrop.UCrop;
 
 import java.io.File;
 import java.lang.reflect.Field;
@@ -31,6 +32,8 @@ public class UcropFragment extends BaseFragment{
     private static final String CROPPED_IMAGE_NAME = ".png";
     private View mRootView;
     private Button toPicturesView;
+    public Uri mCropUri;
+    public String mCropPath;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -80,26 +83,25 @@ public class UcropFragment extends BaseFragment{
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-//        if (requestCode == LOAD_IMAGES_RESULT) {
-//            if (resultCode == RESULT_OK && data != null) {
-//                Uri selectedImage = data.getData();
-//                startCrop(selectedImage);
-//            }
-//        } else if (requestCode == UCrop.REQUEST_CROP && resultCode == RESULT_OK) {
-//            mCropUri = UCrop.getOutput(data);
-//            mCropPicPath = mCropUri.getPath();
-//            mPage.bindImageToAvatarAfterCrop(mCropUri);
-//        }
+        if (requestCode == LOAD_IMAGES_RESULT) {
+            if (resultCode == RESULT_OK && data != null) {
+                Uri selectedImage = data.getData();
+                startCrop(selectedImage);
+            }
+        } else if (requestCode == UCrop.REQUEST_CROP && resultCode == RESULT_OK) {
+            mCropUri = UCrop.getOutput(data);
+            mCropPath = mCropUri.getPath();
+        }
 
     }
 
     private void startCrop(@NonNull Uri uri) {
 
-//        UCrop uCrop = UCrop.of(uri, Uri.fromFile(new File(getActivity().getCacheDir(), System.currentTimeMillis() + CROPPED_IMAGE_NAME)));
-//        UCrop.Options options = new UCrop.Options();
-//        options.setCompressionQuality(50);
-//        uCrop.withOptions(options);
-//        uCrop.start(mActivity);
+        UCrop uCrop = UCrop.of(uri, Uri.fromFile(new File(getActivity().getCacheDir(), System.currentTimeMillis() + CROPPED_IMAGE_NAME)));
+        UCrop.Options options = new UCrop.Options();
+        options.setCompressionQuality(50);
+        uCrop.withOptions(options);
+        uCrop.start(getActivity());
     }
     @Override
     public void onDetach() {
