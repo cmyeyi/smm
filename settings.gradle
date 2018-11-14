@@ -1,1 +1,4 @@
-include ':app',':image-preview', ':permissions'
+include ':app'
+include ':sub-libraries:image-preview'
+include ':sub-libraries:permissions'
+include ':sub-libraries:ucrop'

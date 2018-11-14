@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="@dimen/common_16dp">
+
+    <Button
+        android:id="@+id/id_smm_crop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_60dp"
+        android:background="@drawable/button_bg_selector"
+        android:text="去相册"/>
+</RelativeLayout>

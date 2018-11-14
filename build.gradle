@@ -38,3 +38,14 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    BUILD_TOOLS_VER = "27.0.3"
+    COMPILE_SDK_VER = 26
+    TARGET_SDK_VER = 26
+    MIN_SDK_VER = 16
+    compileSdkVersion = COMPILE_SDK_VER
+    buildToolsVersion = BUILD_TOOLS_VER
+    LIB_VERSION = ["support": "27.1.1", "rxJava": "2.1.1", "rxAndroid": "2.0.1", "gson": "2.8.0"]
+
+}
