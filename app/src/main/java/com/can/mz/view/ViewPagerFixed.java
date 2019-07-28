@@ -3,7 +3,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
-import com.can.mz.utils.ExceptonUtils;
+import com.can.mz.utils.ExceptionUtils;
 
 
 public class ViewPagerFixed extends android.support.v4.view.ViewPager {
@@ -21,7 +21,7 @@ public class ViewPagerFixed extends android.support.v4.view.ViewPager {
         try {
             return super.onTouchEvent(ev);
         } catch (IllegalArgumentException ex) {
-            ExceptonUtils.handlerException(ex);
+            ExceptionUtils.handlerException(ex);
         }
         return false;
     }
@@ -31,7 +31,7 @@ public class ViewPagerFixed extends android.support.v4.view.ViewPager {
         try {
             return super.onInterceptTouchEvent(ev);
         } catch (IllegalArgumentException ex) {
-            ExceptonUtils.handlerException(ex);
+            ExceptionUtils.handlerException(ex);
         }
         return false;
     }

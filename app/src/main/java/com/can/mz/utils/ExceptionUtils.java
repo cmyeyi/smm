@@ -1,6 +1,6 @@
 package com.can.mz.utils;
 
-public class ExceptonUtils {
+public class ExceptionUtils {
 
     public static void handlerException(Throwable e) {
         handlerException(e,null);
