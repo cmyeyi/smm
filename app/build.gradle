@@ -13,7 +13,7 @@ android {
     flavorDimensions "minSdkVersion"
 
     defaultConfig {
-        applicationId "com.kan.mz"
+        applicationId "com.can.mz"
         minSdkVersion 16
         targetSdkVersion 26
         versionCode VERSION_CODE
@@ -39,7 +39,7 @@ android {
 
         android.applicationVariants.all { variant ->
             variant.outputs.all {
-                outputFileName = "HelloGirl_" + defaultConfig.versionName + "_"+ time() +"_${variant.buildType.name}" + ".apk"
+                outputFileName = "smm_" + defaultConfig.versionName + "_"+ time() +"_${variant.buildType.name}" + ".apk"
             }
         }
     }
