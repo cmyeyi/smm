@@ -23,8 +23,10 @@ android {
 
     signingConfigs {
         debug {
-            v1SigningEnabled false
-            v2SigningEnabled false
+            storeFile file('debug.keystore')
+            storePassword 'android'
+            keyAlias 'AndroidDebugKey'
+            keyPassword 'android'
         }
         release {
             v1SigningEnabled true
@@ -62,7 +64,7 @@ android {
             // 移除无用的resource文件
             shrinkResources true
             //签名
-            signingConfig signingConfigs.config
+//            signingConfig signingConfigs.config
             proguardFiles getDefaultProguardFile('proguard-android.txt'), './proguard-rules.pro'
         }
     }
