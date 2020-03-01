@@ -18,13 +18,13 @@ import com.facebook.imagepipeline.request.ImageRequest;
 import java.io.File;
 import java.io.InputStream;
 
+import io.reactivex.Observable;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.functions.Consumer;
+import io.reactivex.functions.Function;
+import io.reactivex.schedulers.Schedulers;
 import okio.BufferedSink;
 import okio.Okio;
-import rx.Observable;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Action1;
-import rx.functions.Func1;
-import rx.schedulers.Schedulers;
 
 /**
  * Created by sll on 2016/4/29.
@@ -47,15 +47,15 @@ public class ImagePreviewPresenter extends BasePresenter<ImagePreviewContract.Im
     @Override
     public void saveImage(final String url) {
         Observable.just(url)
-                .map(new Func1<String, InputStream>() {
+                .map(new Function<String, InputStream>() {
                     @Override
-                    public InputStream call(String s) {
+                    public InputStream apply(String s) {
                         return getImageBytesFromLocal(Uri.parse(s));
                     }
                 })
-                .map(new Func1<InputStream, File>() {
+                .map(new Function<InputStream, File>() {
                     @Override
-                    public File call(InputStream in) {
+                    public File apply(InputStream in) {
                         if (in != null) {
                             String fileName = getFileNameFromUrl(url);
                             File target = new File(getPicSavePath(), fileName);
@@ -74,9 +74,9 @@ public class ImagePreviewPresenter extends BasePresenter<ImagePreviewContract.Im
                         return null;
                     }
                 })
-                .map(new Func1<File, File>() {
+                .map(new Function<File, File>() {
                     @Override
-                    public File call(File file) {
+                    public File apply(File file) {
                         if (file != null && file.exists()) {
                             return file;
                         }
@@ -89,9 +89,9 @@ public class ImagePreviewPresenter extends BasePresenter<ImagePreviewContract.Im
                         return null;
                     }
                 })
-                .doOnNext(new Action1<File>() {
+                .doOnNext(new Consumer<File>() {
                     @Override
-                    public void call(File file) {
+                    public void accept(File file) {
                         if (file != null && file.exists()) {
                             scanPhoto(file);
                         }
@@ -99,9 +99,9 @@ public class ImagePreviewPresenter extends BasePresenter<ImagePreviewContract.Im
                 })
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Action1<File>() {
+                .subscribe(new Consumer<File>() {
                     @Override
-                    public void call(File file) {
+                    public void accept(File file) {
                         if (file != null && file.exists()) {
                             Toast.makeText(mContext, R.string.save_ok, Toast.LENGTH_SHORT).show();
                         } else {

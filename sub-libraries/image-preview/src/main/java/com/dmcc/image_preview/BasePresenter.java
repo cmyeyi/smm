@@ -1,22 +1,24 @@
 package com.dmcc.image_preview;
 
-import rx.Subscription;
-import rx.subscriptions.CompositeSubscription;
+
+import org.reactivestreams.Subscription;
+
+import io.reactivex.disposables.CompositeDisposable;
 
 public abstract class BasePresenter<T> {
     public T mView;
     protected Subscription mSubscription;
-    protected CompositeSubscription mCompositeSubscription;
+    protected CompositeDisposable mCompositeSubscription;
 
     public void attachView(T view) {
         this.mView = view;
         if (mCompositeSubscription == null)
-            mCompositeSubscription = new CompositeSubscription();
+            mCompositeSubscription = new CompositeDisposable();
     }
 
 
     public void detachView() {
-        mCompositeSubscription.unsubscribe();
+        mCompositeSubscription.dispose();
         mView = null;
     }
 
